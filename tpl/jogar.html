@@ -1,0 +1,24 @@
+<ion-view title="Jogo da Forca">
+    <ion-content padding="true">
+        <div class="erros">
+            {{erro}}
+        </div>
+        <div class="palavra">
+            <span class="button button-small button-light" ng-repeat="letra in palavra">
+                {{letra.exibir ? letra.texto : '_'}}
+            </span>
+        </div>
+        <div class="teclado">
+            <button class="button button-small button-light" ng-class="{'active': letra.selecionada}" ng-repeat="letra in teclado" ng-click="selecionar(letra)">{{letra.texto}}</button>
+        </div>
+        <div class="row" ng-if="erro == MAXIMO_ERRO || acerto == palavra.length">
+        	<div class="col">
+        		<button class="button button-block button-light" ng-click="carregar()">Sair</button>
+        	</div>
+        	<div class="col">
+        		<button class="button button-block button-light" ng-click="carregar()">Novo</button>
+        	</div>
+        </div>
+        
+    </ion-content>
+</ion-view>
