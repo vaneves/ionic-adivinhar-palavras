@@ -2,19 +2,15 @@ angular.module('starter.controllers', [])
 
 .controller('JogarCtrl', function ($scope, $ionicModal, Forca, MAXIMO_ERRO) {
     
-    $scope.teclado = [];
-    $scope.palavra = [];
     $scope.palavra_certa = '';
-    $scope.erro = 0;
-    $scope.acerto = 0;
     $scope.MAXIMO_ERRO = MAXIMO_ERRO;
 
     $scope.carregar = function () {
         $scope.erro = 0;
         $scope.acerto = 0;
-
         $scope.teclado = Forca.getTeclado();
-        $scope.palavra = Forca.getPalavra();
+        $scope.palavra_certa = Forca.getPalavra();
+        $scope.palavra = Forca.formatar($scope.palavra_certa);
     };
     $scope.carregar();
 
@@ -39,13 +35,11 @@ angular.module('starter.controllers', [])
             }
         }
     };
-
     $ionicModal.fromTemplateUrl('tpl/acabou.html', {
         scope: $scope
     }).then(function (modal) {
         $scope.acabou = modal;
     });
-
     $scope.close = function () {
         $scope.acabou.hide();
     }
