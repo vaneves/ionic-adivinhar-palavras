@@ -1,45 +1,9 @@
-@import url(https://fonts.googleapis.com/css?family=Gloria+Hallelujah);
-
-ion-content,
-button,
-h1,
-p {
-	font-family: 'Gloria Hallelujah', cursive;
+.logo {
+    text-align: center;
+    padding: 20px;
 }
-ion-content {
-	background: #F7F2DF;
-    background: -webkit-gradient(linear, 0 0, 0 100%, from(#C8DCF3), color-stop(4%, #F7F2DF)) 0 4px;
-    background: -webkit-linear-gradient(top, #C8DCF3 0%, #F7F2DF 8%) 0 4px;
-    background: -moz-linear-gradient(top, #C8DCF3 0%, #F7F2DF 8%) 0 4px;
-    background: -ms-linear-gradient(top, #C8DCF3 0%, #F7F2DF 8%) 0 4px;
-    background: -o-linear-gradient(top, #C8DCF3 0%, #F7F2DF 8%) 0 4px;
-    background: linear-gradient(top, #C8DCF3 0%, #F7F2DF 8%) 0 4px;
- 
-    -webkit-background-size: 100% 20px;
-    -moz-background-size: 100% 20px;
-    -ms-background-size: 100% 20px;
-    -o-background-size: 100% 20px;
-    background-size: 100% 20px;
-}
-ion-modal-view {
-	border: 3px solid #000;
-}
-ion-modal-view ion-content {
-	text-align: center;
-}
-
-.button.button-light,
-.button.button-light:hover {
-	background: #F7F2DF;
-	border: 2px solid #000;
-	font-weight: bold;
-	color: #000;
-	font-size: 16px;
-}
-.button.button-light.active {
-	background: #F7F2DF;
-	color: #0c60ee;
-	border-color: #0c60ee;
+.logo img {
+    width: 100%;
 }
 
 .erros,
@@ -49,12 +13,37 @@ ion-modal-view ion-content {
 .teclado {
     text-align: center;
 }
-.erros,
 .palavra span,
 .teclado button {
     margin: 5px;
     text-transform: uppercase;
 }
+.erros img {
+    width: 100%;
+}
+.erros .resumo {
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: right;
+}
+.palavra {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.palavra span {
+    display: inline-block;
+    margin: 0px;
+    padding: 0;
+    min-width: 20px;
+    color: #000;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: bold;
+}
 .palavra-certa {
-	text-transform: uppercase;	
+    text-transform: uppercase;    
+}
+
+ion-modal-view ion-content {
+    text-align: center;
 }

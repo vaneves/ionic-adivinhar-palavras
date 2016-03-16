@@ -1,0 +1,58 @@
+@import url(https://fonts.googleapis.com/css?family=Gloria+Hallelujah);
+
+ion-content,
+a,
+button,
+h1,
+p {
+    font-family: 'Gloria Hallelujah', cursive;
+}
+ion-content {
+    background: #FFFEE0;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#C8DCF3), color-stop(4%, #FFFEE0)) 0 4px;
+    background: -webkit-linear-gradient(top, #C8DCF3 0%, #FFFEE0 8%) 0 4px;
+    background: -moz-linear-gradient(top, #C8DCF3 0%, #FFFEE0 8%) 0 4px;
+    background: -ms-linear-gradient(top, #C8DCF3 0%, #FFFEE0 8%) 0 4px;
+    background: -o-linear-gradient(top, #C8DCF3 0%, #FFFEE0 8%) 0 4px;
+    background: linear-gradient(top, #C8DCF3 0%, #FFFEE0 8%) 0 4px;
+ 
+    -webkit-background-size: 100% 32px;
+    -moz-background-size: 100% 32px;
+    -ms-background-size: 100% 32px;
+    -o-background-size: 100% 32px;
+    background-size: 100% 32px;
+}
+ion-content::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    top: 0;
+    left: 30px;
+    bottom: 0;
+    border: 1px solid;
+    border-color: transparent #FFE4E1;
+}
+
+ion-modal-view {
+    border: 3px solid #000;
+}
+
+.button.button-stable,
+.button.button-stable:hover,
+.button.button-stable:active {
+    background: none;
+    border: 2px solid #000;
+    font-weight: bold;
+    color: #000;
+    font-size: 16px;
+}
+.button.button-stable.active {
+    background: none;
+    color: #AAA;
+    border-color: #AAA;
+}
+
+.bar.bar-stable.bar-footer {
+    background: none;
+    border: none;
+}

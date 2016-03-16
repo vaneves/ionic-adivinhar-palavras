@@ -1,24 +1,27 @@
 <ion-view title="Jogo da Forca">
     <ion-content padding="true">
         <div class="erros">
-            {{erro}}
+            <div class="row">
+                <div class="col">
+                    <img ng-src="img/erro{{erro}}.png">
+                </div>
+                <div class="col">
+                    <div class="resumo">Acertos: {{acerto}}/{{palavra.length}}</div>
+                    <div class="resumo">Erros: {{erro}}/{{MAXIMO_ERRO}}</div>
+                </div>
+            </div>
         </div>
         <div class="palavra">
-            <span class="button button-small button-light" ng-repeat="letra in palavra">
+            <span ng-repeat="letra in palavra">
                 {{letra.exibir ? letra.texto : '_'}}
             </span>
         </div>
         <div class="teclado">
-            <button class="button button-small button-light" ng-class="{'active': letra.selecionada}" ng-repeat="letra in teclado" ng-click="selecionar(letra)">{{letra.texto}}</button>
-        </div>
-        <div class="row" ng-if="erro == MAXIMO_ERRO || acerto == palavra.length">
-        	<div class="col">
-        		<button class="button button-block button-light" ng-click="carregar()">Sair</button>
-        	</div>
-        	<div class="col">
-        		<button class="button button-block button-light" ng-click="carregar()">Novo</button>
-        	</div>
-        </div>
-        
+            <button class="button button-small button-stable" ng-class="{'active': letra.selecionada}" ng-repeat="letra in teclado" ng-click="selecionar(letra)">{{letra.texto}}</button>
+        </div>        
     </ion-content>
+    <div class="bar bar-footer bar-stable">
+        <a class="button button-stable" href="#/inicio">Voltar</a>
+        <button class="button button-stable" ng-click="carregar()">Novo</button>
+    </div>
 </ion-view>
