@@ -1,51 +1,48 @@
-@import url(https://fonts.googleapis.com/css?family=Gloria+Hallelujah);
-
 ion-content,
 a,
 button,
 h1,
-p {
-    font-family: 'Gloria Hallelujah', cursive;
+p,
+.palavra span {
+    color: #FFF;
+    font-weight: bold;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 1);
 }
+
 ion-content {
-    background: #FFFEE0;
-    background: -webkit-gradient(linear, 0 0, 0 100%, from(#C8DCF3), color-stop(4%, #FFFEE0)) 0 4px;
-    background: -webkit-linear-gradient(top, #C8DCF3 0%, #FFFEE0 8%) 0 4px;
-    background: -moz-linear-gradient(top, #C8DCF3 0%, #FFFEE0 8%) 0 4px;
-    background: -ms-linear-gradient(top, #C8DCF3 0%, #FFFEE0 8%) 0 4px;
-    background: -o-linear-gradient(top, #C8DCF3 0%, #FFFEE0 8%) 0 4px;
-    background: linear-gradient(top, #C8DCF3 0%, #FFFEE0 8%) 0 4px;
- 
-    -webkit-background-size: 100% 32px;
-    -moz-background-size: 100% 32px;
-    -ms-background-size: 100% 32px;
-    -o-background-size: 100% 32px;
-    background-size: 100% 32px;
-}
-ion-content::before {
-    content: '';
-    position: absolute;
-    width: 4px;
-    top: 0;
-    left: 30px;
-    bottom: 0;
-    border: 1px solid;
-    border-color: transparent #FFE4E1;
+    background: #ADDFF5 url('../img/background.png') no-repeat center bottom fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .button.button-stable,
 .button.button-stable:hover,
 .button.button-stable:active {
-    background: none;
-    border: 2px solid #000;
+    background: rgba(230,196,142,1);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(230,196,142,1)), color-stop(100%, rgba(219,174,111,1)));
+    background: -webkit-linear-gradient(top, rgba(230,196,142,1) 0%, rgba(219,174,111,1) 100%);
+    background: -o-linear-gradient(top, rgba(230,196,142,1) 0%, rgba(219,174,111,1) 100%);
+    background: -ms-linear-gradient(top, rgba(230,196,142,1) 0%, rgba(219,174,111,1) 100%);
+    background: linear-gradient(to bottom, rgba(230,196,142,1) 0%, rgba(219,174,111,1) 100%);
+
+    -webkit-box-shadow: inset 0px -1px 2px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: inset 0px -1px 2px 0px rgba(0,0,0,0.2);
+    box-shadow: inset 0px -1px 2px 0px rgba(0,0,0,0.2);
+
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+
+    border: 2.5px solid #FFF9DA;
     font-weight: bold;
-    color: #000;
+    color: #FFF;
     font-size: 16px;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
 }
 .button.button-stable.active {
-    background: none;
-    color: #AAA;
-    border-color: #AAA;
+    opacity: 0.5;
 }
 
 .bar.bar-stable.bar-footer {
